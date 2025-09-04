@@ -1,0 +1,17 @@
+[project]
+name = "sample"
+version = "0.1.0" # Dynamic generation?
+
+
+[build-system]
+requires = [
+  "hatchling",
+  "pybind11",
+  "scikit-build-core"
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel.hooks.scikit-build]
+wheel.install-dir = "sample"
+cmake.source-dir = "cpp"
+experimental = true # ..?

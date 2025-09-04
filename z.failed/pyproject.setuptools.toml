@@ -1,0 +1,42 @@
+[project]
+name = "sample"
+requires-python = ">=3.8"
+dependencies = [
+	"numpy",
+]
+dynamic = ["version"]
+
+[build-system]
+requires = [
+  "scikit-build-core>=0.11",
+  "pybind11",
+  "setuptools",
+  "setuptools-scm",
+]
+build-backend = "scikit_build_core.setuptools.build_meta" # <- ignores 'build-dir' -_-...
+#                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# https://scikit-build-core.readthedocs.io/en/latest/plugins/setuptools.html
+
+#
+# Tool: scikit-build (or scikit-build-core)
+#
+[tool.scikit-build]
+experimental = true
+minimum-version = "build-system.requires"
+build-dir = "build/{wheel_tag}"
+
+cmake.source-dir = "."
+
+metadata.version.provider = "scikit_build_core.metadata.setuptools_scm"
+
+#
+# Tool: setuptools-scm
+#
+[tool.setuptools_scm]
+fallback_version = "1.0.0.dev0"
+local_scheme = "node-and-timestamp"
+# https://setuptools-scm.readthedocs.io/en/latest/config/
+
+# Appendix
+# 
+# https://github.com/scikit-build/scikit-build-core/blob/v0.11.6/tests/packages/toml_setuptools_ext/pyproject.toml

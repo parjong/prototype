@@ -1,0 +1,5 @@
+/build
+/dist
+/.python-version
+/uv.lock
+*.egg-info
