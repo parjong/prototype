@@ -1,0 +1,30 @@
+[project]
+name = "recipe-design"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jonghyun Park", email = "parjong@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+recipe-design = "recipe_design:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.1",
+    "pytest>=8.4.2",
+    "ruff>=0.13.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.15,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.mypy]
+packages = ['recipe_design']
+[[tool.mypy.overrides]]
+module = ["contextlib.*"]
+ignore_missing_imports = true
