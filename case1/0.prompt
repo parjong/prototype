@@ -1,0 +1,56 @@
+### Tools
+
+The following JSON describes the tools that you have, what each tool is for, and which arguments you need to use each tool:
+<json>
+{
+  "tools": [
+    {
+      "name": "get_current_time",
+      "description": "Get current time in a specific timezones",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "timezone": {
+            "type": "string", "description": "IANA timezone name (e.g., 'America/New_York', 'Europe/London')"
+          }
+        },
+        "required": [ "timezone" ]
+      }
+    },
+    {
+      "name": "convert_time",
+      "description": "Convert time between timezones",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "source_timezone": {
+            "type": "string", "description": "Source IANA timezone name (e.g., 'America/New_York', 'Europe/London')"
+          },
+          "time": {
+            "type": "string", "description": "Time to convert in 24-hour format (HH:MM)"
+          },
+          "target_timezone": {
+            "type": "string", "description": "Target IANA timezone name (e.g., 'Asia/Tokyo', 'America/San_Francisco')"
+          }
+        },
+        "required": [ "source_timezone", "time", "target_timezone" ]
+      }
+    }
+  ]
+}
+</json>
+
+### Task
+
+Your task is to write a python-like code that meets the user request.
+
+Here is an example of expected output
+<CODE>
+r0 = call('get_current_time', [ 'timezon': 'America/New_York' ])
+r1 = call('convert_time', [ 'source_timezone': 'America/New_York', 'time': r0, 'target_timezone': 'Asia/Seoul' ])
+</CODE>
+
+### Requests
+
+User: Could you please let me know the current time of San Francisco, and convert it into 'Seoul time'?
+
