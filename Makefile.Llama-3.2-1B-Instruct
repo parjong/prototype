@@ -1,0 +1,22 @@
+all:
+
+download:
+	tune download meta-llama/Llama-3.2-1B-Instruct \
+		--output-dir /tmp/Llama-3.2-1B-Instruct \
+		--ignore-patterns "original/consolidated.00.pth" \
+		--hf-token $(shell cat ~/.token/HF_HUB)
+
+finetune_single_gpu_Qlora:
+	tune run lora_finetune_single_device \
+		enable_activation_checkpointing=True \
+		output_dir=$(CURDIR)/Llama-3.2-1B-Instruct.output \
+		--config llama3_2/1B_qlora_single_device
+
+# https://github.com/pytorch/torchtune/blob/v0.3.1/recipes/configs/llama3_2/1B_qlora_single_device.yaml
+
+
+# compile=True -> Error: Inductor does not support Pin memory
+# 
+# NVIDIA GeForce GTX 1650 with Max-Q Design
+
+
