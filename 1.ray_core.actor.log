@@ -1,0 +1,12 @@
+2025-11-07 21:41:48,245	INFO worker.py:2012 -- Started a local Ray instance.
+2025-11-07 21:41:48,272	INFO packaging.py:588 -- Creating a file package for local module '/home/parjong/craftroom/learn-ray'.
+2025-11-07 21:41:48,307	INFO packaging.py:380 -- Pushing file package 'gcs://_ray_pkg_1eec9e354a1f3b8d.zip' (0.08MiB) to Ray cluster...
+2025-11-07 21:41:48,309	INFO packaging.py:393 -- Successfully pushed file package 'gcs://_ray_pkg_1eec9e354a1f3b8d.zip'.
+/home/parjong/craftroom/learn-ray/.venv/lib/python3.10/site-packages/ray/_private/worker.py:2051: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[33m(raylet)[0m warning: `VIRTUAL_ENV=/home/parjong/craftroom/learn-ray/.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+[33m(raylet)[0m Using CPython 3.10.19
+[33m(raylet)[0m Creating virtual environment at: .venv
+[33m(raylet)[0m Installed 18 packages in 209ms
+[1, 1, 1, 1]
+[33m(raylet)[0m warning: `VIRTUAL_ENV=/home/parjong/craftroom/learn-ray/.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
