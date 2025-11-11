@@ -1,0 +1,6 @@
+BUILD_DIR="build"
+
+all:
+	rm -rf $(BUILD_DIR)
+	cmake -B $(BUILD_DIR) -S $(CURDIR) -DCMAKE_CXX_CLANG_TIDY='clang-tidy'
+	cmake --build $(BUILD_DIR)
