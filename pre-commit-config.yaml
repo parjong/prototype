@@ -1,0 +1,75 @@
+repos:
+  - repo: local
+    hooks:
+      - id: uv
+        name: 'Run uv version (python, dep)'
+        language: python
+        additional_dependencies:
+          - "uv==0.8.*" # pre-commit will install uv 0.8.x
+        entry: uv
+        args: ["self", "version"]
+        verbose: true
+        pass_filenames: false
+
+      - id: uv-python
+        name: 'Run uv version (python)'
+        language: python
+        entry: uv
+        args: ["self", "version"]
+        verbose: true
+        pass_filenames: false
+
+      - id: uv-system
+        name: 'Run uv version (system)'
+        language: system
+        entry: uv
+        args: ["self", "version"]
+        verbose: true
+        pass_filenames: false
+
+      - id: ruff-format
+        name: 'Run ruff format'
+        language: python # language of hook itself
+        additional_dependencies:
+          - "uv==0.8.*" # pre-commit will install uv 0.8.x
+        entry: uv
+        types: [python]  # file types to include
+        args: ["run", "ruff", "format"]
+        verbose: True
+
+      - id: ruff-format-system
+        name: 'Run ruff format (system)'
+        language: system
+        entry: uv
+        types: [python]  # file types to include
+        args: ["run", "ruff", "format"]
+        verbose: True
+
+      - id: ruff-check
+        name: 'Run ruff check'
+        language: python # language of hook itself
+        additional_dependencies:
+          - "uv==0.8.*" # pre-commit will install uv 0.8.x
+        entry: env
+        types: [python]  # file types to include
+        args: ["--unset=VIRTUAL_ENV", "uv", "run", "ruff", "check", "--fix"]
+
+      - id: pytest
+        name: 'Run pytest'
+        entry: env
+        language: python # language of hook itself
+        types: [python]  # file types to include
+        args: ["--unset=VIRTUAL_ENV", "uv", "run", "pytest"]
+        verbose: true
+        pass_filenames: false
+        always_run: true
+
+      - id: pytest_system
+        name: 'Run pytest (system)'
+        language: system # Guess: 'uv' SHOULD be installed before
+        entry: uv
+        args: ["run", "pytest"]
+        verbose: true
+        types: [python]  # file types to include
+        pass_filenames: false
+        always_run: true
