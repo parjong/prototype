@@ -1,0 +1,65 @@
+make[1]: Entering directory '/home/parjong/craftroom/pre-commit-local-uv'
+uv --version
+uv 0.9.3
+uvx pre-commit run --all-files --config pre-commit-config.yaml
+Run uv version (python, dep).............................................[42mPassed[m
+[2m- hook id: uv[m
+[2m- duration: 0.01s[m
+
+uv [36m0.8.24[39m
+
+Run uv version (python)..................................................[42mPassed[m
+[2m- hook id: uv-python[m
+[2m- duration: 0.01s[m
+
+uv [36m0.9.3[39m
+
+Run uv version (system)..................................................[42mPassed[m
+[2m- hook id: uv-system[m
+[2m- duration: 0.01s[m
+
+uv [36m0.9.3[39m
+
+Run ruff format..........................................................[42mPassed[m
+[2m- hook id: ruff-format[m
+[2m- duration: 0.03s[m
+
+[1m[33mwarning[39m[0m[1m:[0m [1m`VIRTUAL_ENV=/home/parjong/.cache/pre-commit/repofa8fgiie/py_env-python3.14` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead[0m
+2 files left unchanged
+
+Run ruff format (system).................................................[42mPassed[m
+[2m- hook id: ruff-format-system[m
+[2m- duration: 0.02s[m
+
+2 files left unchanged
+
+Run ruff check...........................................................[42mPassed[m
+Run pytest...............................................................[42mPassed[m
+[2m- hook id: pytest[m
+[2m- duration: 0.19s[m
+
+]9;4;3;\[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.14.0, pytest-9.0.1, pluggy-1.6.0
+rootdir: /home/parjong/craftroom/pre-commit-local-uv
+configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 1 item                                                               [0m
+
+tests/test_sample.py ]9;4;1;0\[32m.[0m[32m                                                   [100%][0m]9;4;0;\
+
+[32m============================== [32m[1m1 passed[0m[32m in 0.00s[0m[32m ===============================[0m
+
+Run pytest (system)......................................................[42mPassed[m
+[2m- hook id: pytest_system[m
+[2m- duration: 0.2s[m
+
+]9;4;3;\[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.14.0, pytest-9.0.1, pluggy-1.6.0
+rootdir: /home/parjong/craftroom/pre-commit-local-uv
+configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 1 item                                                               [0m
+
+tests/test_sample.py ]9;4;1;0\[32m.[0m[32m                                                   [100%][0m]9;4;0;\
+
+[32m============================== [32m[1m1 passed[0m[32m in 0.00s[0m[32m ===============================[0m
+
+make[1]: Leaving directory '/home/parjong/craftroom/pre-commit-local-uv'
