@@ -1,0 +1,11 @@
+repos:
+  - repo: https://github.com/rhysd/actionlint.git
+    rev: v1.6.26 # Use the latest stable version of actionlint
+    hooks:
+      - id: actionlint
+        name: Lint GitHub Actions workflows
+        entry: actionlint
+        language: golang
+        types: ["yaml"]
+        files: ^\.github/workflows/
+        args: ["-color"] # Optional: Add arguments like -color for colored output
