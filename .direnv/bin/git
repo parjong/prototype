@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ "$PWD" = "$CRAFTROOM_ROOT" ]]; then
+  /usr/bin/git --git-dir "$CRAFTROOM_ROOT/.repo/.git" --work-tree "$CRAFTROOM_ROOT/.repo" "$@"
+  exit $?
+fi
+
+/usr/bin/git "$@"
