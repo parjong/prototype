@@ -1,0 +1,3 @@
+export CRAFTROOM_ROOT=$PWD
+
+PATH_add "$PWD/.direnv/bin"
