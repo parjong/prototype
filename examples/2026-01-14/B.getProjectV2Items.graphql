@@ -1,0 +1,30 @@
+query($projectId: ID!) { node(id: $projectId) {
+  ... on ProjectV2 { # https://docs.github.com/en/graphql/reference/objects#projectv2
+    title
+    items(first: 100) {
+      nodes {
+        id
+        fieldValues(first: 20) {
+          # https://docs.github.com/en/graphql/reference/objects#projectv2fieldconfigurationconnection
+          nodes {
+            # https://docs.github.com/en/graphql/reference/unions#projectv2itemfieldvalue
+            ... on ProjectV2ItemFieldSingleSelectValue {
+              id
+              name
+              field { ... on ProjectV2SingleSelectField {
+                # https://docs.github.com/en/graphql/reference/objects#projectv2singleselectfield
+                id, name
+              } }
+            }
+          }
+        }
+        content {
+          ... on Issue { title }
+          ... on PullRequest { title }
+          ... on DraftIssue { title }
+        }
+      }
+    }
+  }
+} }
+# gh api graphql -F "query=$(cat B.getProjectV2Items.graphql)" -F "projectId=PVT_kwHOAOPA3c4BKub1" --jq '.data.node.items.nodes[0]'

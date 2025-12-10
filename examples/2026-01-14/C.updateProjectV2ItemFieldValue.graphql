@@ -1,0 +1,16 @@
+mutation ($fieldId: ID!, $itemId: ID!, $projectId: ID!, $optionId: ID!) {
+  # https://docs.github.com/en/graphql/reference/mutations#updateprojectv2itemfieldvalue
+  updateProjectV2ItemFieldValue(input: {
+    # https://docs.github.com/en/graphql/reference/input-objects#updateprojectv2itemfieldvalueinput
+    fieldId: $fieldId,
+    itemId: $itemId,
+    projectId: $projectId,
+    value: {
+      # https://docs.github.com/en/graphql/reference/input-objects#projectv2fieldvalue
+      singleSelectOptionId: $optionId,
+    }
+  }) {
+    projectV2Item { id }
+  }
+}
+# gh api graphql -F "query=$(cat updateProjectV2ItemFieldValue.graphql)" -F "fieldId=PVTSSF_lAHOAOPA3c4BKub1zg7Yfh0" -F "itemId=PVTI_lAHOAOPA3c4BKub1zgjQKM8" -F "projectId=PVT_kwHOAOPA3c4BKub1" -F "optionId=ef50347f"

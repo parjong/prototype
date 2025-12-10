@@ -1,0 +1,9 @@
+#!/bin/bash
+
+QUERY_FILENAME="$1"
+LOG_FILENAME="$QUERY_FILENAME.log"
+
+(
+  gh api graphql -F "query=$(cat $QUERY_FILENAME)"
+) | jq | tee $LOG_FILENAME
+#   ~~ -> To make output pretty

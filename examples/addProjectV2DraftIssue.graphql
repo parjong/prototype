@@ -1,0 +1,10 @@
+# https://github.com/users/parjong/projects/1
+mutation {
+  # https://docs.github.com/en/enterprise-server@3.15/graphql/reference/mutations#addprojectv2draftissue
+  addProjectV2DraftIssue(input: {
+    # https://docs.github.com/en/enterprise-server@3.15/graphql/reference/input-objects#addprojectv2draftissueinput
+    projectId: "PVT_kwHOAOPA3c4BKub1",
+    title: "http://a.b.c",
+    body: "Hello?",
+  }) { projectItem { id } }
+}
