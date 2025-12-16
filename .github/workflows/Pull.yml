@@ -1,0 +1,8 @@
+on:
+  pull_request:
+
+jobs:
+  run:
+    runs-on: [ self-hosted-k8n ]
+    steps:
+      run: echo 'Hello?'
