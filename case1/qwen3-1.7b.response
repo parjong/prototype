@@ -1,0 +1,35 @@
+0
+<CODE>
+r0 = call('get_current_time', [ 'timezone': 'America/New_York' ])
+r1 = call('convert_time', [ 'source_timezone': 'America/New_York', 'time': r0, 'target_timezone': 'Asia/Seoul' ])
+</CODE>
+
+0 - END
+1
+<CODE>
+r0 = call('get_current_time', [ 'timezone': 'America/New_York' ])
+r1 = call('convert_time', [ 'source_timezone': 'America/New_York', 'time': r0, 'target_timezone': 'Asia/Seoul' ])
+</CODE>
+
+1 - END
+2
+<CODE>
+r0 = call('get_current_time', [ 'timezone': 'America/New_York' ])
+r1 = call('convert_time', [ 'source_timezone': 'America/New_York', 'time': r0, 'target_timezone': 'Asia/Seoul' ])
+</CODE>
+
+2 - END
+3
+<CODE>
+r0 = call('get_current_time', [ 'timezone': 'America/San_Francisco' ])
+r1 = call('convert_time', [ 'source_timezone': 'America/San_Francisco', 'time': r0, 'target_timezone': 'Asia/Seoul' ])
+</CODE>
+
+3 - END
+4
+<CODE>
+r0 = call('get_current_time', [ 'timezone': 'America/San_Francisco' ])
+r1 = call('convert_time', [ 'source_timezone': 'America/San_Francisco', 'time': r0, 'target_timezone': 'Asia/Seoul' ])
+</CODE>
+
+4 - END
