@@ -1,0 +1,6 @@
+[submodule "frameworks/tensorflow"]
+	path = frameworks/tensorflow
+	url = http://github.com/tensorflow/tensorflow.git
+[submodule "frameworks/caffe"]
+	path = frameworks/caffe
+	url = http://github.com/BVLC/caffe.git
