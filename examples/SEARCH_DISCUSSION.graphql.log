@@ -1,0 +1,16 @@
+{
+  "data": {
+    "search": {
+      "discussionCount": 1,
+      "nodes": [
+        {
+          "title": "Sample 1",
+          "url": "https://github.com/parjong/prototype/discussions/19",
+          "repository": {
+            "nameWithOwner": "parjong/prototype"
+          }
+        }
+      ]
+    }
+  }
+}

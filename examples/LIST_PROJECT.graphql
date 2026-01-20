@@ -1,0 +1,13 @@
+query {
+  user(login: "parjong") {
+    # https://docs.github.com/en/graphql/reference/objects#organization
+    projectsV2(first: 10) {
+      # https://docs.github.com/en/graphql/reference/objects#projectv2connection
+      nodes {
+        # https://docs.github.com/en/graphql/reference/objects#projectv2
+        id
+        title
+      }
+    }
+  }
+}

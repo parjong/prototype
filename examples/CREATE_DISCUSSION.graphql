@@ -1,0 +1,10 @@
+mutation {
+  createDiscussion(input: {
+    repositoryId: "YOUR_REPOSITORY_NODE_ID",
+    categoryId: "YOUR_CATEGORY_NODE_ID",
+    title: "New Discussion Title",
+    body: "This is the content of the new discussion."
+  }) {
+    discussion { id }
+  }
+}

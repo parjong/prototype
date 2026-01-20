@@ -1,0 +1,16 @@
+query {
+  repository(owner: "parjong", name: "prototype") {
+    issue(number: 19) {
+      id
+      __typename
+    }
+    pullRequest(number: 19) {
+      id
+      __typename
+    }
+    discussion(number: 19) {
+      id
+      __typename
+    }
+  }
+}

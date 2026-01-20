@@ -1,0 +1,12 @@
+query ($number: Int!, $fldname: String!) { user(login: "parjong") {
+  projectV2(number: $number) {
+    field(name: $fldname) {
+      __typename
+      ...on ProjectV2SingleSelectField {
+        id
+        options { id, name }
+      }
+    }
+  }
+} }
+# gh api graphql -F "query=$(cat A.getSingleSelectField.graphql)" -F "number=1" -F "fldname=SEC"

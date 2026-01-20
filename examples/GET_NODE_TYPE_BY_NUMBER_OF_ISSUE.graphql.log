@@ -1,0 +1,42 @@
+{
+  "data": {
+    "repository": {
+      "issue": {
+        "id": "I_kwDOPpIoXc7cc4Yk",
+        "__typename": "Issue"
+      },
+      "pullRequest": null,
+      "discussion": null
+    }
+  },
+  "errors": [
+    {
+      "type": "NOT_FOUND",
+      "path": [
+        "repository",
+        "pullRequest"
+      ],
+      "locations": [
+        {
+          "line": 7,
+          "column": 5
+        }
+      ],
+      "message": "Could not resolve to a PullRequest with the number of 17."
+    },
+    {
+      "type": "NOT_FOUND",
+      "path": [
+        "repository",
+        "discussion"
+      ],
+      "locations": [
+        {
+          "line": 11,
+          "column": 5
+        }
+      ],
+      "message": "Could not resolve to a Discussion with the number of 17."
+    }
+  ]
+}

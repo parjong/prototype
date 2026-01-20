@@ -1,0 +1,13 @@
+# https://docs.github.com/en/graphql/reference/queries#search
+query {
+  search(query: "Sample in:title repo:parjong/prototype", type: DISCUSSION, first: 10) {
+    discussionCount
+    nodes {
+      ... on Discussion {
+        title
+        url
+        repository { nameWithOwner }
+      }
+    }
+  }
+}
