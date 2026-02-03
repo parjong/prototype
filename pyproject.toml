@@ -1,0 +1,25 @@
+[project]
+name = "automate-article-triage"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jonghyun Park", email = "parjong@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "langchain-google-genai>=4.2.0",
+    "pydantic>=2.12.5",
+    "requests>=2.32.5",
+    "trafilatura>=2.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.14",
+]

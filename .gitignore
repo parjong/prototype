@@ -1,0 +1,6 @@
+/local.env
+/local.envrc
+
+# Reserved
+/uv.lock
+/.python-version
