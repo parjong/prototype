@@ -1,0 +1,6 @@
+BUILD_DIR="T1/build/uvx"
+
+all:
+	rm -rf $(BUILD_DIR)
+	cmake -B $(BUILD_DIR) -S T1 -DCMAKE_CXX_CLANG_TIDY='uvx;clang-tidy'
+	cmake --build $(BUILD_DIR) --verbose
