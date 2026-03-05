@@ -1,0 +1,19 @@
+[project]
+name = "telegram-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jonghyun Park", email = "parjong@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "python-telegram-bot>=22.6",
+]
+
+[project.scripts]
+telegram-bot = "telegram_bot:main"
+
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
