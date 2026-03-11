@@ -1,0 +1,17 @@
+# https://geminicli.com/docs/cli/custom-commands/
+description = "Find page title and issue date from a raw HTML file"
+
+prompt = """
+# Task: Extract Concise Title and Issue Date
+
+'{{args}' is expected to be `<path/to/input/html> <path/to/output/json>`
+
+Analyze the content of a .html file specified by `<path/to/input/html>` and
+extract two pieces of information:
+1. The concise main title of the article or page.
+2. The issue or publication date as YYYY/MM/DD format (if available).
+  - Use "?????/??/??" if not available
+
+Format your answer as a JSON object with keys "date" and "title" and write it into
+`<path/to/output/json>``
+"""

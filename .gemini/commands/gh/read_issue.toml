@@ -1,0 +1,6 @@
+description = "Read the body of a given issue"
+prompt = """
+1. Get the body of a given issue with the following command
+   - `gh issue view {{args}} --json body --jq '.body --repo parjong/companion'
+2. Create a fresh temporary file and store the body into the temp file
+"""

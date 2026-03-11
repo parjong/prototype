@@ -1,0 +1,17 @@
+description = "Read the body of a given question and give a feedback"
+prompt = """
+### User Question
+
+!{gh issue view --json title --jq '.title' --repo parjong/companion {{args}}}
+
+### User Rationale
+
+!{gh issue view  --json body --jq '.body' --repo parjong/companion {{args}}}
+
+### Task
+
+1. Read user question and rationale
+2. Prepare a feedback as a coworker (referred to as <FEEDBACK> below)
+3. Post that feedback with the following command
+   - `gh issue comment --repo parjong/companion {{args}} --body '<FEEDBACK>'`
+"""
