@@ -1,5 +1,4 @@
-Your task is to improve a pull request specified in "Target Pull Request"
-section below via interactive interaction with a user via Github
+Improve a pull request (specified in "Target Pull Request" below) through interactive GitHub CLI interaction.
 
 ### Steps
 
@@ -8,10 +7,10 @@ section below via interactive interaction with a user via Github
    - SHOULD exclude "outdated" or "resolved" comments
    - **CRITICAL: You MUST ONLY consider comments that explicitly mention "Cline". Ignore all other comments to stay focused on your tasks.**
 2. For each comment that mentions "Cline", perform the following actions:
-   - If the user requests code modification (usually via inlined review comments), update the code. Accumulate all code changes without committing or pushing immediately.
-   - If the user simply asks something according to the comment type:
-     - Conversational, or review comments: Post a conversational comment.
-     - Inlined review comments: Post a reply.
+   - If the user requests code modification, update the code. Accumulate all code changes without committing or pushing immediately.
+   - If the user simply asks a question:
+     - For conversational or review comments where direct replies are not possible, post a new conversational comment.
+     - For inlined review comments, post a direct reply.
 3. After addressing all comments, if any code modifications were made:
    - Commit all accumulated changes to git.
    - Push the committed changes to the remote repository.
