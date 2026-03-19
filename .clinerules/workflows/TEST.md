@@ -8,6 +8,7 @@ section below via interactive interaction with a user via Github
    - SHOULD exclude "outdated" or "resolved" comments
 2. Do one one the following action for each comments that explicitly mentions "cline".
    - Update the code if the user requests code modification (usually via inlined review comments)
+     - If changes are made, commit them to git and push.
    - Post a comment if the user simply ask something according to the comment type
      - Conversational, or review comments
        - Post a conversational comment
