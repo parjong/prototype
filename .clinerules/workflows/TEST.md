@@ -29,5 +29,6 @@ To prevent recurrence and ensure efficient task execution, consider the followin
 3.  **Token optimization**: Always strive to optimize token usage by explicitly specifying only the necessary fields in `gh api` or `gh pr view --json` queries (e.g., `body`, `path`, `line`, `original_line`, `id`, `in_reply_to_comment_id`, `pull_request_review_id`, `commit_id`, `position`, `author.login`).
 4.  **Distinguishing instruction types**: Carefully differentiate between instructions that necessitate direct code modifications within project files and those that require an update to the agent\'s internal process or understanding to avoid unnecessary file changes.
 5.  **Accumulating changes for efficiency**: To optimize the workflow, accumulate all code modifications locally. Only perform a single commit and push to the remote repository after all review comments requesting code changes have been addressed.
+6.  **Using `--body-file` for `gh pr comment`**: To prevent newline rendering issues and shell interpretation problems, always use the `--body-file` option with `gh pr comment`. This allows the comment body to be read from a file, ensuring accurate formatting.
 
 ### Target Pull Request
