@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.egg-info
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Direnv local settings
+.envrc.local
+
+# Octopith local data & test environment
+.octopith/
+*.sqlite
+*.sqlite.toml
+*.db
+*.db.toml
+
+# Project metadata
+.python-version
+
+uv.lock
+scratch
