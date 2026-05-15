@@ -1,0 +1,12 @@
+# Octopith Local Credentials Template
+# Copy this file to .envrc.local and fill in your values.
+
+# [REQUIRED] GitHub Personal Access Token
+# Create one at: https://github.com/settings/tokens
+export OCTOPITH_GITHUB_TOKEN="your_github_token_here"
+
+# [OPTIONAL] Override default config directory
+# export OCTOPITH_CONFIG_DIR="./.octopith"
+
+# [OPTIONAL] Log Level (DEBUG, INFO, WARNING, ERROR)
+# export OCTOPITH_LOG_LEVEL="INFO"
