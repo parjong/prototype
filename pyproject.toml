@@ -1,0 +1,12 @@
+[project]
+name = "prototype-gem5"
+version = "0.1.0"
+description = "GEM5 prototyping environment with SystemC model"
+readme = "README.md"
+requires-python = ">=3.10, <3.13"
+dependencies = [
+    "gem5-custom",
+]
+
+[tool.uv.sources]
+gem5-custom = { path = "3rdparty", editable = true }
