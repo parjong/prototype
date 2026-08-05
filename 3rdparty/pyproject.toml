@@ -1,0 +1,15 @@
+[project]
+name = "gem5-custom"
+version = "25.1.0"
+description = "Customized GEM5 Python package with SystemC model integration"
+requires-python = ">=3.10, <3.13"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+"m5" = "gem5/src/python/m5"
+"gem5" = "gem5/src/python/gem5"
+"gem5_custom" = "gem5_custom"

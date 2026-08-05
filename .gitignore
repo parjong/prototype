@@ -1,0 +1,6 @@
+sample.out
+build/
+result/
+.nix-deps/
+uv.lock
+*.egg-info

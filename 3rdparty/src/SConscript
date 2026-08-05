@@ -1,0 +1,5 @@
+Import('*')
+
+SimObject('CustomSystemCDevice.py', sim_objects=['CustomSystemCDevice'])
+Source('custom_systemc_device.cc')
+DebugFlag('CustomDevice')
